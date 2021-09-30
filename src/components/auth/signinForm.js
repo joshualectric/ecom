@@ -28,7 +28,7 @@ class SignInForm extends Component {
             }
         ]
         return (
-            <form onSubmit={handleSubmit} className='sign-in-form'>
+            <form onSubmit={handleSubmit} className={`${className} sign-in-form`}>
                 <Field className='sign-in-form__email' 
                 type='email' 
                 title='Email' 
