@@ -8,7 +8,7 @@ class Details extends Component {
         let children = [];
         if(links) {
             children = links.map(link => {
-                return <a key={link.id} onClick={onClick} className='details__link'>{link.title}</a>
+                return <a key={link.id} onClick={link.onClick} className='details__link'>{link.title}</a>
             })
 
         } else if(info) {
@@ -20,7 +20,7 @@ class Details extends Component {
     }
 
     render() {
-        const { className, title, onClick, } = this.props;
+        const { className, title, onClick } = this.props;
         return (
             <div className={`${className} details`}>
                 <div className='details__title'>{title}</div>
