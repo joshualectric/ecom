@@ -42,11 +42,15 @@
 
     &__state,
     &__zipcode {
-    grid-column: m/e;
-    input {
-        width: 200px;
+        grid-column: m/e;
+        input {
+            width: 200px;
+        }
     }
-}
+
+    &__change-password {
+        transform: translateY(38px);
+    }
     
 
 }
