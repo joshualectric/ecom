@@ -11,12 +11,12 @@ class Navbar extends Component {
         }
     }
     render() {
-        return(
+        return (
             <div className='navbar'>
                 {
                     this.props.navbarLinks.map((link, index) => {
                         return (
-                            <a className={`navbar__link ${link.active ? 'green-text' : ''}`} key={index} onClick={() => this.handleOnClick()}>
+                            <a className={`navbar__link ${link.active ? 'green-text' : ''}`} key={index} onClick={() => this.handleOnClick(link)}>
                                 {link.title}
                             </a>
                         )
