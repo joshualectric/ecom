@@ -1,12 +1,43 @@
 import {
     SET_USER_PURCHASES,
-    SET_PURCHASE_DETAIL
+    SET_PURCHASE_DETAIL,
+    SET_CART_PRODUCTS
 } from './types';
 
 export function setPurchaseDetail(_id) {
     return ({
         type: SET_PURCHASE_DETAIL,
         payload: _id
+    })
+}
+
+export function fetchCartProducts() {
+    return ({
+        type: SET_CART_PRODUCTS,
+        payload: [
+            {
+                _id: 0,
+                product: {
+                    _id: 0,
+                    title: 'Javascript In the Browser',
+                    description: 'This is a test of the ramajam broadcast system. Testing, Testing...1.2.3.',
+                    price: 1.99,
+                    belongsTo: [0, 1]
+                },
+                quantity: 2
+            },
+            {
+                _id: 1,
+                product: {
+                    _id: 1,
+                    title: 'Graph Database',
+                    description: 'This is a test of the ramajam broadcast system. Testing, Testing...1.2.3.',
+                    price: 1.99,
+                    belongsTo: [0, 1]
+                },
+                quantity: 1
+            },
+        ]
     })
 }
 
